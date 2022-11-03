@@ -56,7 +56,7 @@ with open(MCTOP_PROJECTS_PAGES_FILE, 'w') as f:
     txt = ""
     for i in result:
         logging.debug(f"#{i[0]}={i[1]}")
-        txt = txt + f"{i[0]}:{i[1]}\n"
+        txt = txt + f"{i[0]};{i[1]}\n"
     #тут срез чтобы не вставлять последний перевод строки)
     f.write(txt[:-len("\n")])
 logging.info(f"file saved {MCTOP_PROJECTS_PAGES_FILE}")
