@@ -9,7 +9,7 @@ from config import *
 
 
 def how_many_seconds(file):
-    # получпем дату изменения файла
+    # получаем дату изменения файла
     last_update = os.path.getmtime(file)
     last_update = datetime.datetime.fromtimestamp(last_update)
 

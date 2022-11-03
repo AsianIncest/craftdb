@@ -12,8 +12,8 @@ MCTOP_PROJECTS_PAGES_FILE = 'mctop_projects_pages_links.txt'
 MCTOP_PAGES_CACHE = "mctop_pages_cache"
 #время в секундах жизни кеша
 #ЗЫ - чтобы постоянно во время отладки не перекачивать
-MCTOP_PAGES_CACHE_TIMEOUT = 999
+MCTOP_PAGES_CACHE_TIMEOUT = 3600*6
 #аналогично для страниц проектов
 MCTOP_PROJECTS_CACHE = "mctop_projects_cache"
-MCTOP_PROJECTS_CACHE_TIMEOUT = 999
-DEFAULT_TIMEOUT = 999
+MCTOP_PROJECTS_CACHE_TIMEOUT = 3600*6
+DEFAULT_TIMEOUT = 3600*6

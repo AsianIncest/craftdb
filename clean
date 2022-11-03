@@ -1,0 +1,2 @@
+#!/bin/bash
+rm -rf mctop_pages_cache mctop_projects_cache mctop_pages_links.txt mctop_projects_pages_links.txt

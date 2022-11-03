@@ -28,3 +28,4 @@ for i in lis:
 file = open(MCTOP_PAGES_LINKS_FILE, 'w')
 file.write("\n".join(links))
 file.close()
+logging.info(f"writed --> {MCTOP_PAGES_LINKS_FILE}")
