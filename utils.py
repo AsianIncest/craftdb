@@ -50,3 +50,12 @@ def cache(url, folder, file, timeout=DEFAULT_TIMEOUT, html=""):
         os.mkdir(folder)
         logging.info(f"[{__file__}] down&save {url} -> {path}")
         return down_and_save(url, path)
+
+def url_to_id(url):
+    ''' in >> https://mctop.su/servers/4888/
+        out >> 4888
+    '''
+    url = 'https://mctop.su/servers/4888/'
+    spl = url.split('/')
+    return spl[4]
+
