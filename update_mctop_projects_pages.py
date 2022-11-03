@@ -52,7 +52,7 @@ for f in get_files():
 #понятия не имею, но работает
 result = sorted(result, key=lambda r: r[0])
 
-with open(MCTOP_PROJECTS_PAGES_FILE,'w') as f:
+with open(MCTOP_PROJECTS_PAGES_FILE, 'w') as f:
     txt = ""
     for i in result:
         logging.debug(f"#{i[0]}={i[1]}")
