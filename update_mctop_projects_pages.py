@@ -12,4 +12,4 @@ for link in links:
     url = link[1]
     file = f"{n.zfill(3)}_{url_to_id(url)}.html"
     logging.info(f"{url} --> {file}")
-    cache(url, MCTOP_PROJECTS_CACHE, file)
+    cache(url, MCTOP_PROJECTS_CACHE, file, timeout=MCTOP_PROJECTS_CACHE_TIMEOUT)

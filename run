@@ -1,0 +1,11 @@
+#!/bin/bash
+source ../venv/bin/activate
+echo "1/4 Pagination"
+python3 update_mctop_pagination.py
+echo "2/4 Update pages"
+python3 update_mctop_pages.py
+echo "3/4 Update urls"
+python3 update_mctop_projects_pages_urls.py
+echo "4/4 Update projects pages"
+python3 update_mctop_projects_pages.py
+echo "All done!"
