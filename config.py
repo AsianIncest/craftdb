@@ -16,3 +16,4 @@ MCTOP_PAGES_CACHE_TIMEOUT = 999
 #аналогично для страниц проектов
 MCTOP_PROJECTS_CACHE = "mctop_projects_cache"
 MCTOP_PROJECTS_CACHE_TIMEOUT = 999
+DEFAULT_TIMEOUT = 999
