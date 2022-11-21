@@ -21,8 +21,11 @@ def get_html(url):
     return requests.get(url, headers=headers)
 
 def down_and_save(url, path):
+    if not os.path.exists(MCTOP_PAGES_CACHE):
+        logging.debug(f"No folder {MCTOP_PAGES_CACHE} make it!")
+        os.mkdir(MCTOP_PAGES_CACHE)
     html = requests.get(url, headers=headers).text
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         f.write(html)
     return html
 

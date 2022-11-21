@@ -1,3 +1,4 @@
+#1
 from config import *
 import utils
 import logging
@@ -9,7 +10,7 @@ if DEBUG:
     logging.info(f"[{__file__}]")
 
 html = utils.get_html(MCTOP_MAIN_URL).text
-soup = BeautifulSoup(html, 'lxml')
+soup = BeautifulSoup(html, 'html.parser')
 
 # получаем блок с пагинацией
 pagination = soup.find('ul', class_='pagination')

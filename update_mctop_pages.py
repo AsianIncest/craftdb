@@ -1,3 +1,4 @@
+#2
 import os
 import datetime
 import shutil
@@ -19,6 +20,9 @@ def how_many_seconds(file):
 
 def update():
     pages_links = None
+    if not os.path.exists(MCTOP_PAGES_LINKS_FILE):
+        logging.error(f"No file ({MCTOP_PAGES_LINKS_FILE}), please run update_mctop_pages.py")
+
     with open(MCTOP_PAGES_LINKS_FILE) as f:
         pages_links = f.read().split("\n")
     pn = 1 #page number

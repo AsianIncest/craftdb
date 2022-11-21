@@ -1,3 +1,4 @@
+#3
 from config import *
 import os
 import logging
@@ -6,8 +7,8 @@ from bs4 import BeautifulSoup
 
 def get_files():
     html_file_path = []
-    with os.scandir(MCTOP_PAGES_CACHE) as dir:
-        for f in dir:
+    with os.scandir(MCTOP_PAGES_CACHE) as direct:
+        for f in direct:
             # печать всех записей, являющихся файлами
             if f.is_file():
                 file = os.path.join(MCTOP_PAGES_CACHE, f.name)
@@ -15,8 +16,8 @@ def get_files():
     return html_file_path
 
 def get_projects_links(filename):
-    html = open(filename).read()
-    soup = BeautifulSoup(html, 'lxml')
+    html = open(filename, encoding='utf-8').read()
+    soup = BeautifulSoup(html, 'html.parser')
     main_table = soup.find('section', {
         "class": "server-rt-cards"})
     servers_rows = main_table.find_all('article', {
